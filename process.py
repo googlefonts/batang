@@ -85,7 +85,7 @@ def makeTTC():
 			"build/gungsuh-regular.ttf",
 			"build/gungsuhChe-regular.ttf",
 			"-o",
-			"fonts/ttc/gulim-regular.ttc"
+			"fonts/ttc/batang-regular.ttc"
 		]
 	)
 
