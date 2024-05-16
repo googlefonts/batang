@@ -30,7 +30,7 @@ def prepareStatic():
 	for ttf in SOURCE.glob("*.ttf"):
 		print ("Processing "+str(ttf).split("/")[2])
 		font = TTFont(ttf)
-		OUTPUT = str(ttf)[:-4].replace("sources/ttf","build").lower()+"-regular.ttf"
+		OUTPUT = str(ttf)[:-4].replace("sources/ttf","build").lower()+"-Regular.ttf"
 
 		for id in removeGID:
 			font["glyf"][font.getGlyphName(id)] = Glyph() #blanks the control characters in each of the fonts
@@ -80,19 +80,19 @@ def makeTTC():
 		[
 			"fonttools",
 			"ttLib",
-			"build/batang-regular.ttf",
-			"build/batangChe-regular.ttf",
-			"build/gungsuh-regular.ttf",
-			"build/gungsuhChe-regular.ttf",
+			"build/batang-Regular.ttf",
+			"build/batangChe-Regular.ttf",
+			"build/gungsuh-Regular.ttf",
+			"build/gungsuhChe-Regular.ttf",
 			"-o",
-			"fonts/ttc/batang-regular.ttc"
+			"fonts/ttc/batang-Regular.ttc"
 		]
 	)
 
 # Subsetting the static instances for individual use
 def subsetStatic():
 
-	for ttf in BUILD.glob("*regular.ttf"):
+	for ttf in BUILD.glob("*Regular.ttf"):
 		fontName = str(ttf).split("/")[1]
 		font = TTFont(ttf)
 		cmapDict = font.getBestCmap()
